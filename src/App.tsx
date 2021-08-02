@@ -1,13 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
+import {Button,Container,Row} from 'react-bootstrap';
 import './App.css';
-import {Container} from 'react-bootstrap';
-import { Login } from './Component/Login/LoginComponent';
-
+import Routers from "./Router"
 
 function App() {
   return (
-    <Login></Login>
+    <Container fluid>
+       <Routers></Routers>
+    </Container>
   );
 }
 

@@ -1,0 +1,12 @@
+{
+  "user_details": [
+    {
+      "id": 1,
+      "fullName": "master admin",
+      "age": 25,
+      "email": "admin@gmail.com",
+      "username": "admin",
+      "password": "admin1234"
+    }
+  ]
+}
