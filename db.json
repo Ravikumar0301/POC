@@ -2,11 +2,44 @@
   "user_details": [
     {
       "id": 1,
-      "fullName": "master admin",
+      "fullName": "Ravikumar",
       "age": 25,
       "email": "admin@gmail.com",
       "username": "admin",
       "password": "admin1234"
     }
+  ],
+  "student_details":[
+     {
+       "id": 1,
+       "Student Name": "John",
+       "Standard": 6,
+       "Tamil": 50,
+       "English": 80,
+       "Maths": 75 ,
+       "Science": 96,
+       "Social science": 88
+     },
+     {
+      "id": 2,
+      "Student Name": "Ram",
+      "Standard": 6,
+      "Tamil": 60,
+      "English": 70,
+      "Maths": 80,
+      "Science": 90,
+      "Social science": 100
+    },
+    {
+      "id": 1,
+      "Student Name": "Raja",
+      "Standard": 7,
+      "Tamil": 40,
+      "English": 60,
+      "Maths": 80 ,
+      "Science": 65,
+      "Social science": 95
+    }
+
   ]
 }

@@ -30,4 +30,6 @@ button{
 
 .error-msg{
   color: red;
+  display: flex;
+  align-items: left;
 }

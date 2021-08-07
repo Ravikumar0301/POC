@@ -40,98 +40,100 @@ export class Register extends React.Component <any,any>{
     render(){
         return(
             <div className="register-container">
-                <Row>
-                    <Col>
-                        <label>Full Name<span className="mandotry">*</span>:</label>
-                    </Col>
-                    <Col>
-                        <input value = {this.state.fullname} type= "text"  onChange={(e)=>{
-								this.setState({fullname:e.target.value})}}
-                        onFocus = {() => {this.setState({fullname_valid:false})}}
-                        >                      
-                        </input>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col className="error-msg">{this.state.fullname_valid ? "Please enter the fullname..!":""}</Col>
-                </Row>
-                <Row>
-                    <Col>
-                        <label>Age<span className="mandotry">*</span> :</label>
-                    </Col>
-                    <Col>
-                        <input value = {this.state.age} type= "text"  onChange={(e)=>{
-								this.setState({age:e.target.value})}}
-                                onFocus = {() => {this.setState({age_valid:false})}}
-                        >                      
-                        </input>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col className="error-msg">{this.state.age_valid ? "Please enter the age..!":""}</Col>
-                </Row>    
-                <Row>
-                    <Col>
-                        <label>E-mail<span className="mandotry">*</span> :</label>
-                    </Col>
-                    <Col>
-                        <input value = {this.state.email} type= "text"  onChange={(e)=>{
-								this.setState({email:e.target.value})
-                        }} onFocus = {() => {this.setState({email_valid:false})}}>                      
-                        </input>
-                    </Col>
-                </Row>   
-                <Row>
-                    <Col className="error-msg">{this.state.email_valid ? "Please enter the e-mail..!":""}</Col>
-                </Row>  
-                <Row>
-                    <Col>
-                        <label>Username<span className="mandotry">*</span> :</label>
-                    </Col>
-                    <Col>
-                        <input value = {this.state.username} type= "text"  onChange={(e)=>{
-								this.setState({username:e.target.value})}}
-                                onFocus = {() => {this.setState({username_valid:false})}}
-                                >                      
-                        </input>
-                    </Col>
-                </Row>  
-                <Row>
-                    <Col className="error-msg">{this.state.username_valid ? "Please enter the username..!":""}</Col>
-                </Row>
-                <Row>
-                    <Col>
-                        <label>Password<span className="mandotry">*</span> :</label>
-                    </Col>
-                    <Col>
-                        <input value = {this.state.pswd} type= "text"  onChange={(e)=>{
-								this.setState({pswd:e.target.value})}}
-                                onFocus = {() => {this.setState({pswd_valid:false})}} 
-                        >                      
-                        </input>
-                    </Col>
-                </Row>  
-                <Row>
-                    <Col className="error-msg">{this.state.pswd_valid ? "Please enter the password..!":""}</Col>
-                </Row>
-                <Row>
-                    <Col>
-                        <label>Confirm Password<span className="mandotry">*</span> :</label>
-                    </Col>
-                    <Col>
-                        <input value = {this.state.confirm_pswd} type= "text"  onChange={(e)=>{
-								this.setState({confirm_pswd:e.target.value})}}
-                                onFocus = {() => {this.setState({cnfrm_pswd_valid:false})}}        
-                        >                      
-                        </input>
-                    </Col>
-                </Row>   
-                <Row>
-                    <Col className="error-msg">{this.state.cnfrm_pswd_valid ? this.state.confirm_pswd_errmsg:""}</Col>
-                </Row>
-                <Row>
-                    <Col><button onClick={this.onSubmit}>Submit</button></Col>
-                </Row>
+                <div className="register-form">
+                    <Row>
+                        <Col>
+                            <label>Full Name<span className="mandotry">*</span>:</label>
+                        </Col>
+                        <Col>
+                            <input value = {this.state.fullname} type= "text"  onChange={(e)=>{
+                                    this.setState({fullname:e.target.value})}}
+                            onFocus = {() => {this.setState({fullname_valid:false})}}
+                            >                      
+                            </input>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col className="error-msg">{this.state.fullname_valid ? "Please enter the fullname..!":""}</Col>
+                    </Row>
+                    <Row>
+                        <Col>
+                            <label>Age<span className="mandotry">*</span> :</label>
+                        </Col>
+                        <Col>
+                            <input value = {this.state.age} type= "text"  onChange={(e)=>{
+                                    this.setState({age:e.target.value})}}
+                                    onFocus = {() => {this.setState({age_valid:false})}}
+                            >                      
+                            </input>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col className="error-msg">{this.state.age_valid ? "Please enter the age..!":""}</Col>
+                    </Row>    
+                    <Row>
+                        <Col>
+                            <label>E-mail<span className="mandotry">*</span> :</label>
+                        </Col>
+                        <Col>
+                            <input value = {this.state.email} type= "text"  onChange={(e)=>{
+                                    this.setState({email:e.target.value})
+                            }} onFocus = {() => {this.setState({email_valid:false})}}>                      
+                            </input>
+                        </Col>
+                    </Row>   
+                    <Row>
+                        <Col className="error-msg">{this.state.email_valid ? "Please enter the e-mail..!":""}</Col>
+                    </Row>  
+                    <Row>
+                        <Col>
+                            <label>Username<span className="mandotry">*</span> :</label>
+                        </Col>
+                        <Col>
+                            <input value = {this.state.username} type= "text"  onChange={(e)=>{
+                                    this.setState({username:e.target.value})}}
+                                    onFocus = {() => {this.setState({username_valid:false})}}
+                                    >                      
+                            </input>
+                        </Col>
+                    </Row>  
+                    <Row>
+                        <Col className="error-msg">{this.state.username_valid ? "Please enter the username..!":""}</Col>
+                    </Row>
+                    <Row>
+                        <Col>
+                            <label>Password<span className="mandotry">*</span> :</label>
+                        </Col>
+                        <Col>
+                            <input value = {this.state.pswd} type= "text"  onChange={(e)=>{
+                                    this.setState({pswd:e.target.value})}}
+                                    onFocus = {() => {this.setState({pswd_valid:false})}} 
+                            >                      
+                            </input>
+                        </Col>
+                    </Row>  
+                    <Row>
+                        <Col className="error-msg">{this.state.pswd_valid ? "Please enter the password..!":""}</Col>
+                    </Row>
+                    <Row>
+                        <Col>
+                            <label>Confirm Password<span className="mandotry">*</span> :</label>
+                        </Col>
+                        <Col>
+                            <input value = {this.state.confirm_pswd} type= "text"  onChange={(e)=>{
+                                    this.setState({confirm_pswd:e.target.value})}}
+                                    onFocus = {() => {this.setState({cnfrm_pswd_valid:false})}}        
+                            >                      
+                            </input>
+                        </Col>
+                    </Row>   
+                    <Row>
+                        <Col className="error-msg">{this.state.cnfrm_pswd_valid ? this.state.confirm_pswd_errmsg:""}</Col>
+                    </Row>
+                    <Row>
+                        <Col><button onClick={this.onSubmit}>Submit</button></Col>
+                    </Row>
+                </div>                
             </div>
         )
     }

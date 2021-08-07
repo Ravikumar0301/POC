@@ -7,13 +7,13 @@ import axios from 'axios';
 export class Login extends React.Component<any,any>{
     constructor(props:any){
         super(props)
+        sessionStorage.clear()
         this.state ={
             username: "",
             password: "",
             message:"",
             username_valid: false,
-            pswd_valid: false,
-            api_call:true,
+            pswd_valid: false
         }
         this.onlogin = this.onlogin.bind(this);
         this.onclear = this.onclear.bind(this);
@@ -22,28 +22,28 @@ export class Login extends React.Component<any,any>{
     onlogin(){
         console.log('username: ' + this.state.username + 'password: ' + this.state.password )
         if(this.state.username === ""){
-            this.setState({username_valid: true,api_call:false})
+            this.setState({
+                username_valid: true
+            })
         }
 
         if(this.state.password === ""){
-            this.setState({pswd_valid: true,api_call:false})
+            this.setState({
+                pswd_valid: true
+            })
         }
 
-        if(this.state.api_call === true){
-            axios.get("http://localhost:3001/user_details",{
+        if(this.state.username != "" && this.state.password != "" ){
+            axios.get("http://localhost:3000/user_details/1",{
             }).then((res:any)=>{
-                console.log(res.data.data);
-                if(res.data.status ===200){
-                    sessionStorage.setItem("userinfo",JSON.stringify(res.data.data))
-                    this.props.history.push('/register')
+                // console.log(res.data.data);
+                if(res.status ===200){
+                    sessionStorage.setItem("userinfo",JSON.stringify(res.data))
+                    this.props.history.push('/home')
                 }
             })
         }   
-
-        // if(this.state.api_call === false){
-        //     this.setState({api_call:true})
-        // }
-        
+       
     }
 
     onclear(){

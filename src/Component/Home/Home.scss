@@ -1,0 +1,48 @@
+.home-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    position:relative;
+    background-color: steelblue;
+    color: white;
+
+}
+
+.home-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.home-header::before{
+    content: "\f549";
+    font-family: "FontAwesome";
+}
+
+.user-details{
+    display: flex;
+    flex-direction: column;
+    float:right;
+    padding: 5px;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.user-details button {
+    font-size: 14px;
+    background-color: transparent;
+}
+
+.user-details button:hover{
+    color:yellow;
+}
+
+.grid-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
